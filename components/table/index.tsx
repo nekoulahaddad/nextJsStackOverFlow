@@ -1,4 +1,4 @@
-import { IQuestionData } from '@/types/main';
+import { IQuestionData, IQuestionItem } from '@/types/main';
 import { useRouter } from 'next/router'
 import React from "react";
 import TableHeader from "../tableHeader";
@@ -15,7 +15,7 @@ const Table = ({ data }: { data: IQuestionData }) => {
     <table>
       <tbody>
         <TableHeader />
-        {data.items.map((item: any) => (
+        {data.items.map((item: IQuestionItem) => (
           <RowElement onClick={() => handleChooseQuestion(item.question_id)} key={item.question_id}>
             <th>{item.owner.display_name}</th>
             <th>{item.title}</th>

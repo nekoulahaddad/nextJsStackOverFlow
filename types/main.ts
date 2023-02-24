@@ -14,12 +14,12 @@ export interface IQuestionData {
     items: IQuestionItem[]
 }
 
-interface IQuestionItem {
+export interface IQuestionItem {
     tags: string[];
     owner: any;
     is_answered: boolean;
     view_count: number;
     answer_count: number;
-    question_id: number;
+    question_id: string;
     title:string;
 }
